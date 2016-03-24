@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Survey Master</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="scss/reset.css">
+	<link rel="stylesheet" href="scss/styles.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header_container">
+			<img class="logo" src="images/logo.svg" alt="Adidas logo">
+			<div class="title">Help Us Improve</div>
+			<div class="body_copy">Congratulations on your recent order from adidas.co.uk. We’d like to improve our quick customisation service by making it even easier to add your name and number to our products. Please help us by taking this quick survey – it’ll take less than 2 minutes to do, we promise.</div>
+		</div>
+	</header>
+	<div class="page">
+
+		<div class="question_container">
+			<div class="question q_radio_vertical single_answer">
+				<h1>I would personalize again on my next purchase</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Yes</span></li>
+					<li class="answer show_extras" data-extra-q="a"><span class="tooltip">No</span></li>
+				</ul>
+
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Why not?"></textarea>	
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>How did you find out about quick customization</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Through someone I know</span></li>
+					<li class="answer"><span class="tooltip">From Adidas Communication (Newsletter, site banners, social media)</span></li>
+					<li class="answer"><span class="tooltip">Via an Online blog</span></li>
+					<li class="answer show_extras" data-extra-q="a"=><span class="tooltip">By chance on the Website</span></li>
+					<li class="answer show_extras" data-extra-q="b"><span class="tooltip">Other</span></li>
+				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="b">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Other options?"></textarea>	
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Which page?"></textarea>	
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>It was easy to add my name and number on the product I purchased</h1>
+				<ul class="answers">
+					<li class="answer">1<span class="tooltip">Strongly Agree</span></li>
+					<li class="answer">2<span class="tooltip">Agree</span></li>
+					<li class="answer">3<span class="tooltip">Somewhat agree</span></li>
+					<li class="answer">4<span class="tooltip">Somewhat disagree</span></li>
+					<li class="answer">5<span class="tooltip">Disagree</span></li>
+					<li class="answer">6<span class="tooltip">Strongly disagree</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>It was easy to find Products which you can quick customize on Adidas.co.uk</h1>
+				<ul class="answers">
+					<li class="answer show_extras" data-extra-q="a">1<span class="tooltip">Strongly Agree</span></li>
+					<li class="answer show_extras" data-extra-q="a">2<span class="tooltip">Agree</span></li>
+					<li class="answer show_extras" data-extra-q="a">3<span class="tooltip">Somewhat agree</span></li>
+					<li class="answer show_extras" data-extra-q="b">4<span class="tooltip">Somewhat disagree</span></li>
+					<li class="answer show_extras" data-extra-q="b">5<span class="tooltip">Disagree</span></li>
+					<li class="answer show_extras" data-extra-q="b">6<span class="tooltip">Strongly disagree</span></li>
+				</ul>
+			</div>
+			<div class="question q_checkbox extra_question hidden" data-extra-q="a">
+				<h1>What did you like?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Price</span></li>
+					<li class="answer"><span class="tooltip">Speed</span></li>
+					<li class="answer"><span class="tooltip">Service</span></li>
+				</ul>
+			</div>
+			<div class="question q_checkbox extra_question hidden" data-extra-q="b">
+				<h1>What can we do to help?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Give a discount</span></li>
+					<li class="answer"><span class="tooltip">Make the user experience easier</span></li>
+					<li class="answer"><span class="tooltip">Make the process faster</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>I would personalize products belonging to the following categories</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Football</span></li>
+					<li class="answer"><span class="tooltip">Running</span></li>
+					<li class="answer"><span class="tooltip">Training</span></li>
+					<li class="answer"><span class="tooltip">Originals</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>I would be willing to pay .. euros extra to personalize my football product</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">$0</span></li>
+					<li class="answer"><span class="tooltip">< $15</span></li>
+					<li class="answer"><span class="tooltip">< $40</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+		
+
+		<div class="question_container">
+			<div class="question q_sortable">
+				<h1>Please rank how likely you are to personalize a product type. </h1>
+				<p>Highest = most likely. Lowest = Least likely</p>
+				<ul class="answers sortable">
+					<li class="answer"><span class="tooltip">Shoes</span></li>
+					<li class="answer"><span class="tooltip">T-Shirt</span></li>
+					<li class="answer"><span class="tooltip">Pants</span></li>
+					<li class="answer"><span class="tooltip">Jackets</span></li>
+					<li class="answer"><span class="tooltip">Hats</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_images">
+				<h1>From which player would you like to receive a signed football shirt?</h1>
+				<ul class="answers">
+					<li class="answer"><img src="images/player_robben.png" alt="" width="100" height="100"><span class="tooltip">Robben</span></li>
+					<li class="answer"><img src="images/player_messi.png" alt="" width="100" height="100"><span class="tooltip">Messi</span></li>
+					<li class="answer"><img src="images/player_bale.png" alt="" width="100" height="100"><span class="tooltip">Bale</span></li>
+					<li class="answer"><img src="images/player_ronaldo.png" alt="" width="100" height="100"><span class="tooltip">Ronaldo</span></li>
+					<li class="answer"><img src="images/player_neymar.png" alt="" width="100" height="100"><span class="tooltip">Neymar</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_radio_vertical single_answer">
+				<h1>Which is your favourite sport?</h1>
+				<ul class="answers">
+					<li class="answer"><span class="tooltip">Basketball</span></li>
+					<li class="answer"><span class="tooltip">Tennis</span></li>
+					<li class="answer"><span class="tooltip">Football</span></li>
+					<li class="answer"><span class="tooltip">Rugby</span></li>
+				</ul>
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_textbox">
+				<h1>Tell me a story</h1>
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Write your answer here."></textarea>	
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="question_container">
+			<div class="question q_form">
+				<h1>Please fill out the below information to win a signed football shirt</h1>
+				<input type="email" placeholder="Email address">
+				<input type="text" placeholder="First name">
+				<input type="text" placeholder="Last Name">
+				<input type="number" placeholder="Age">
+				<input type="text" placeholder="Gender">
+			</div>
+		</div><!--CONTAINER -->
+
+		<div class="submit_container">
+			<div class="submit_field">
+				<div class="submit_button">Submit Survey</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

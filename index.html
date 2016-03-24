@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Survey Master</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="scss/reset.css">
+	<link rel="stylesheet" href="scss/styles.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+	<div class="overlay hidden">
+		<div class="popup">
+			<h1 class="title">Thank you</h1>
+			<p>We appreciate you're time for helping us improve. We will be in touch soon with a small token of our appreciation.</p>
+			<a class="submit_button" href="http://www.adidas.com">Back to adidas</a>
+		</div>
+	</div>
+	<header>
+		<div class="header_container">
+			<img class="logo" src="images/logo.svg" alt="Adidas logo">
+			<div class="title">Thank you for your purchase. Help Us Improve</div>
+			<div class="body_copy">adidas has the spirit of a top athlete - always striving to improve, get faster and go the extra mile. And you could help us. Let’s team up!
+With our quick 5 minute online survey, please tell us about your adidas experience.  
+At the end of this survey we’ll ask you to join our panel for future paid and unpaid user testing. </div>
+		</div>
+	</header>
+	<div class="page">
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>How old are you?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">-18<span class="tooltip">Under 18</span></li>
+					<li class="answer">18+<span class="tooltip">18 - 24</span></li>
+					<li class="answer">25+<span class="tooltip">25 - 34</span></li>
+					<li class="answer">35+<span class="tooltip">35 - 44</span></li>
+					<li class="answer">45+<span class="tooltip">45 - 54</span></li>
+					<li class="answer">55+<span class="tooltip">55 - 64</span></li>
+					<li class="answer">65+<span class="tooltip">65 - 74</span></li>
+					<li class="answer">75+<span class="tooltip">75 or older</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>What is your gender?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">F<span class="tooltip">Female</span></li>
+					<li class="answer">M<span class="tooltip">Male</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>Which country do you live in?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">AR<span class="tooltip">Argentina</span></li>
+					<li class="answer" tabindex="0">BR<span class="tooltip">Brazil</span></li>
+					<li class="answer" tabindex="0">DE<span class="tooltip">Germany</span></li>
+					<li class="answer" tabindex="0">FR<span class="tooltip">France</span></li>
+					<li class="answer" tabindex="0">UK<span class="tooltip">United Kingdom</span></li>
+					<li class="answer" tabindex="0">US<span class="tooltip">United States</span></li>
+					<li class="answer show_extras" data-extra-q="a">+<span class="tooltip">Other</span></li>
+				</ul>
+
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Which country?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>On which device do you normally purchase items?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">D<span class="tooltip">Desktop</span></li>
+					<li class="answer">M<span class="tooltip">Mobile</span></li>
+					<li class="answer">T<span class="tooltip">Tablet</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_sortable">
+				<h1>Thinking of all the information that impacts your product purchase decision, please rank the following in terms of most to least important.</h1>
+				<p>Highest = most likely. Lowest = Least likely</p>
+				<ul class="answers sortable">
+					<li class="answer" tabindex="0"><span class="tooltip">Price</span></li>
+					<li class="answer"><span class="tooltip">Product images</span></li>
+					<li class="answer"><span class="tooltip">Product description</span></li>
+					<li class="answer"><span class="tooltip">Product videos</span></li>
+					<li class="answer"><span class="tooltip">Ratings</span></li>
+					<li class="answer"><span class="tooltip">Reviews</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>When shopping for a product, at what point do use ratings and reviews?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Never</span></li>
+					<li class="answer"><span class="tooltip">Before starting to browse for a product</span></li>
+					<li class="answer"><span class="tooltip">While I'm browsing for a product</span></li>
+					<li class="answer show_extras"><span class="tooltip">After I'm done browsing for a product and have made a decision to purchase that product</span></li>
+					<li class="answer show_extras" data-extra-q="a"><span class="tooltip">Other</span></li>
+				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="At which point?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>How important are consumer ratings and reviews in helping you make your purchase decision?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">1<span class="tooltip">Very unimportant</span></li>
+					<li class="answer">2<span class="tooltip">Unimportant</span></li>
+					<li class="answer">3<span class="tooltip">Neither unimportant nor important</span></li>
+					<li class="answer">4<span class="tooltip">Important</span></li>
+					<li class="answer">5<span class="tooltip">Very important</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>Would you consider purchasing a product that has no reviews?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">Y<span class="tooltip">Yes</span></li>
+					<li class="answer" tabindex="0">N<span class="tooltip">No</span></li>
+					<li class="answer show_extras" data-extra-q="a">M<span class="tooltip">Depends on the product</span></li>
+				</ul>
+
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Which products?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>What is the maximum number of reviews you read before making a purchasing decision?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">0<span class="tooltip">Under 18</span></li>
+					<li class="answer">1+<span class="tooltip">1 - 4</span></li>
+					<li class="answer">5+<span class="tooltip">5 - 7</span></li>
+					<li class="answer">7+<span class="tooltip">7 - 9</span></li>
+					<li class="answer">10+<span class="tooltip">More than 10</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>Imagine you are provided with an incentive such as a discount or something similar to review a product. How would that impact the likelihood of you completing a review?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">N<span class="tooltip">I wouldn't complete a review</span></li>
+					<li class="answer">Y<span class="tooltip">I would be very likely to complete a review</span></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>If you were offered an incentive to complete a review, which of the following incentives would be MOST appealing to you?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Access to limited/special edition products</span></li>
+					<li class="answer"><span class="tooltip">Discounts</span></li>
+					<li class="answer"><span class="tooltip">Engaging with the company</span></li>
+					<li class="answer"><span class="tooltip">Free delivery on online orders</span></li>
+					<li class="answer"><span class="tooltip">Gift cards</span></li>
+					<li class="answer show_extras" data-extra-q="a"><span class="tooltip">Other</span></li>
+				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="What other incentives?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>Have you ever written a review online before?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">Y<span class="tooltip">Yes</span></li>
+					<li class="answer show_extras" data-extra-q="a">N<span class="tooltip">No</span></li>
+				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Why have you not written a review?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>What motivates you to write reviews?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Being able to help other people make the right decisions</span></li>
+					<li class="answer"><span class="tooltip">Share my experience</span></li>
+					<li class="answer"><span class="tooltip">Helping the company make improvements</span></li>
+					<li class="answer"><span class="tooltip">Being able to warn others about bad products</span></li>
+					<li class="answer"><span class="tooltip">An incentive</span></li>
+					<li class="answer show_extras" data-extra-q="a"><span class="tooltip">Other</span></li>
+				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="What other motivations?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>On which device do you normally submit reviews?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">D<span class="tooltip">Desktop</span></li>
+					<li class="answer">M<span class="tooltip">Mobile</span></li>
+					<li class="answer">T<span class="tooltip">Tablet</span></li>
+					<li class="answer">X<span class="tooltip">I have never submitted a review</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>In the future, would you be interested in completing a paid or unpaid survey? If yes, please fill out your details below.</h1>
+				<ul class="answers">
+					<li class="answer show_extras" data-extra-q="a" tabindex="0">Y<span class="tooltip">Yes</span></li>
+					<li class="answer">N<span class="tooltip">No</span></li>
+				</ul>			
+			</div>
+			<div class="question q_form extra_question hidden" data-extra-q="a">
+				<h1>Please fill out the below information.</h1>
+				<input type="text" placeholder="Your name" tabindex="0">
+				<input type="email" placeholder="Your email address" tabindex="0">
+			</div>	
+		</div>
+
+		<div class="submit_container">
+			<div class="submit_field">
+				<div class="submit_button" tabindex="0">Submit Survey</div>
+			</div>
+		</div>
+
+
+		<!-- <div class="question_container">
+			<div class="question q_radio_vertical single_answer">
+				<h1>I would personalize again on my next purchase</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Yes</span></li>
+					<li class="answer show_extras" data-extra-q="a"><span class="tooltip">No</span></li>
+				</ul>
+
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Why not?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>How did you find out about quick customization</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Through someone I know</span></li>
+					<li class="answer"><span class="tooltip">From Adidas Communication (Newsletter, site banners, social media)</span></li>
+					<li class="answer"><span class="tooltip">Via an Online blog</span></li>
+					<li class="answer show_extras" data-extra-q="a"=><span class="tooltip">By chance on the Website</span></li>
+					<li class="answer show_extras" data-extra-q="b"><span class="tooltip">Other</span></li>
+				</ul>
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="b">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Other options?"></textarea>	
+			</div>
+			<div class="question q_textbox extra_question hidden" data-extra-q="a">
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Which page?"></textarea>	
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>It was easy to add my name and number on the product I purchased</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0">1<span class="tooltip">Strongly Agree</span></li>
+					<li class="answer">2<span class="tooltip">Agree</span></li>
+					<li class="answer">3<span class="tooltip">Somewhat agree</span></li>
+					<li class="answer">4<span class="tooltip">Somewhat disagree</span></li>
+					<li class="answer">5<span class="tooltip">Disagree</span></li>
+					<li class="answer">6<span class="tooltip">Strongly disagree</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio single_answer">
+				<h1>It was easy to find Products which you can quick customize on Adidas.co.uk</h1>
+				<ul class="answers">
+					<li class="answer show_extras" data-extra-q="a" tabindex="0">1<span class="tooltip">Strongly Agree</span></li>
+					<li class="answer show_extras" data-extra-q="a">2<span class="tooltip">Agree</span></li>
+					<li class="answer show_extras" data-extra-q="a">3<span class="tooltip">Somewhat agree</span></li>
+					<li class="answer show_extras" data-extra-q="b">4<span class="tooltip">Somewhat disagree</span></li>
+					<li class="answer show_extras" data-extra-q="b">5<span class="tooltip">Disagree</span></li>
+					<li class="answer show_extras" data-extra-q="b">6<span class="tooltip">Strongly disagree</span></li>
+				</ul>
+			</div>
+			<div class="question q_checkbox extra_question hidden" data-extra-q="a">
+				<h1>What did you like?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Price</span></li>
+					<li class="answer"><span class="tooltip">Speed</span></li>
+					<li class="answer"><span class="tooltip">Service</span></li>
+				</ul>
+			</div>
+			<div class="question q_checkbox extra_question hidden" data-extra-q="b">
+				<h1>What can we do to help?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Give a discount</span></li>
+					<li class="answer"><span class="tooltip">Make the user experience easier</span></li>
+					<li class="answer"><span class="tooltip">Make the process faster</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>I would personalize products belonging to the following categories</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Football</span></li>
+					<li class="answer"><span class="tooltip">Running</span></li>
+					<li class="answer"><span class="tooltip">Training</span></li>
+					<li class="answer"><span class="tooltip">Originals</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_checkbox">
+				<h1>I would be willing to pay .. euros extra to personalize my football product</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">$0</span></li>
+					<li class="answer"><span class="tooltip">< $15</span></li>
+					<li class="answer"><span class="tooltip">< $40</span></li>
+				</ul>
+			</div>
+		</div>
+		
+
+		<div class="question_container">
+			<div class="question q_sortable">
+				<h1>Please rank how likely you are to personalize a product type. </h1>
+				<p>Highest = most likely. Lowest = Least likely</p>
+				<ul class="answers sortable">
+					<li class="answer" tabindex="0"><span class="tooltip">Shoes</span></li>
+					<li class="answer"><span class="tooltip">T-Shirt</span></li>
+					<li class="answer"><span class="tooltip">Pants</span></li>
+					<li class="answer"><span class="tooltip">Jacket</span></li>
+					<li class="answer"><span class="tooltip">Hat</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_images">
+				<h1>From which player would you like to receive a signed football shirt?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><img src="images/player_robben.png" alt="" width="100" height="100"><span class="tooltip">Robben</span></li>
+					<li class="answer"><img src="images/player_messi.png" alt="" width="100" height="100"><span class="tooltip">Messi</span></li>
+					<li class="answer"><img src="images/player_bale.png" alt="" width="100" height="100"><span class="tooltip">Bale</span></li>
+					<li class="answer"><img src="images/player_ronaldo.png" alt="" width="100" height="100"><span class="tooltip">Ronaldo</span></li>
+					<li class="answer"><img src="images/player_neymar.png" alt="" width="100" height="100"><span class="tooltip">Neymar</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_radio_vertical single_answer">
+				<h1>Which is your favourite sport?</h1>
+				<ul class="answers">
+					<li class="answer" tabindex="0"><span class="tooltip">Basketball</span></li>
+					<li class="answer"><span class="tooltip">Tennis</span></li>
+					<li class="answer"><span class="tooltip">Football</span></li>
+					<li class="answer"><span class="tooltip">Rugby</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="question_container">
+			<div class="question q_textbox">
+				<h1>Tell me a story</h1>
+				<textarea name="text_answer" id="" cols="30" rows="6" placeholder="Write your answer here." tabindex="0"></textarea>	
+			</div>
+		</div><
+
+		<div class="question_container">
+			<div class="question q_form">
+				<h1>Please fill out the below information to win a signed football shirt</h1>
+				<input type="email" placeholder="Email address" tabindex="0">
+				<input type="text" placeholder="First name" tabindex="0">
+				<input type="text" placeholder="Last Name" tabindex="0">
+				<input type="number" placeholder="Age" tabindex="0">
+				<input type="text" placeholder="Gender" tabindex="0">
+			</div>
+		</div>
+
+		<div class="submit_container">
+			<div class="submit_field">
+				<div class="submit_button" tabindex="0">Submit Survey</div>
+			</div>
+		</div> -->
+
+	</div>
+</body>
+</html>
