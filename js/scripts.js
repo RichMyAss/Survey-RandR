@@ -71,8 +71,9 @@ function alignTooltips(){
 		var tooltip = $(this);
 		
 		//ADJUST SIZING
-		var width = tooltip.innerWidth();
-		var realign = ((width/2)/1.5) * -1;
+		var width = tooltip.width();
+		var answerPadding = $(this).width();
+		var realign = ((width/2) + (answerPadding/2)) * -1;
 
 		//SET NEW SIZE
 		if(!mobile){
